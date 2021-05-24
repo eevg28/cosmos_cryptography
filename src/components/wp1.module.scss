@@ -1,0 +1,201 @@
+@import "./../base.scss";
+@import "./../grid.scss";
+
+.back {
+  position: absolute;
+  z-index: 4;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 28px;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+.wp1Block,
+.wp1MobileBlock {
+  width: 688px;
+  height: 417px;
+  background-image: url("/img/window-notepad.png");
+  @include back-img(contain, center, no-repeat);
+  position: absolute;
+  z-index: 5;
+
+  &.wp1MobileBlock {
+    margin-top: -30px;
+    width: 264px;
+    height: 417px;
+    background-image: url("/img/window-notepad-mobile.png");
+    @include back-img(contain, center, no-repeat);
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 15px;
+    height: 13px;
+    padding: 0px;
+    background-color: transparent;
+    opacity: 1;
+    cursor: pointer;
+    @include border-radius(0px);
+    border: 0px;
+    @include box-shadow(none);
+
+    &:hover {
+      background-color: $color-black;
+      opacity: 0.2;
+    }
+  }
+
+  .downloadButton {
+    position: absolute;
+    left: 150px;
+    top: 26px;
+    @include font(12px, 1, $color-black, 400, null);
+    text-decoration: underline;
+
+    @media (max-width: $maxMediaSM) {
+      // top: 9px;
+    }
+  }
+
+  .title {
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    @include font(12px, 1, $color-white, 400, null);
+
+    @media (max-width: $maxMediaSM) {
+      top: 9px;
+    }
+  }
+
+  .address {
+    position: absolute;
+    left: 75px;
+    top: 79px;
+    @include font(12px, 1, $color-black, 400, null);
+
+    @media (max-width: $maxMediaSM) {
+      top: 81px;
+    }
+  }
+
+  .count {
+    position: absolute;
+    left: 12px;
+    bottom: 8px;
+    @include font(12px, 1, $color-black, 400, null);
+
+    @media (max-width: $maxMediaSM) {
+      bottom: 6px;
+    }
+  }
+
+  .backUp {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #9b9993;
+    position: relative;
+    z-index: 2;
+  }
+
+  .backButton {
+    display: flex;
+    align-items: center;
+    width: auto;
+    border: dotted 1px transparent;
+    cursor: pointer;
+    padding: 2px 3px;
+
+
+    .iconItemLB {
+      width: 20px;
+    }
+
+    .nameItemLB {
+      margin-left: 10px;
+      @include font(12px, 1, $color-black, 400, null);
+    }
+  }
+
+  .listContentBlock {
+
+    img {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .nullListBlock {
+      @include font(12px, 1, $color-black, 400, null);
+    }
+
+    .itemListBlock,
+    .itemListBlockActive {
+      border: dotted 1px transparent;
+      cursor: pointer;
+      padding: 2px 3px;
+      width: 70px;
+      margin: 5px;
+      text-align: center;
+
+      &:hover,
+      &.itemListBlockActive {
+        border-color: $color-black;
+      }
+
+      .iconItemLB {
+        width: 40px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .nameItemLB {
+        display: block;
+        margin-top: 10px;
+        @include font(12px, 1, $color-black, 400, null);
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .contentBlock {
+    position: absolute;
+    left: 10px;
+    top: 44px;
+    bottom: 21px;
+    right: 10px;
+    overflow-x: auto;
+
+    // background-color: $color-black;
+    .nullListBlock {
+      position: absolute;
+      z-index: 1;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &.wp1MobileBlock {
+    .contentBlock {
+      left: 7px;
+      top: 44px;
+      bottom: 21px;
+      right: 4px;
+    }
+  }
+
+  .wp1List {
+    position: relative;
+  }
+
+}

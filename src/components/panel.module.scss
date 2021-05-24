@@ -1,0 +1,26 @@
+@import "./../base.scss";
+@import "./../grid.scss";
+
+.logo{
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a{
+    color: #fff !important;
+  }
+}
+
+.site_layout_background{  
+  background: #fff;
+}
+
+.login_wrapper{
+  padding: 150px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

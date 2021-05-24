@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'W95FA';
+    src: url('W95FARegular.eot');
+    src: url('W95FARegular.eot?#iefix') format('embedded-opentype'),
+        url('W95FARegular.woff2') format('woff2'),
+        url('W95FARegular.woff') format('woff'),
+        url('W95FARegular.ttf') format('truetype'),
+        url('W95FARegular.svg#W95FARegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
